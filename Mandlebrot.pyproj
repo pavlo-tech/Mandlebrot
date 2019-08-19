@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>f427a6a1-3b24-4ae5-ab05-163b1b12a906</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>Mandlebrot.py</StartupFile>
+    <StartupFile>tensorflowMandlebrot.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
