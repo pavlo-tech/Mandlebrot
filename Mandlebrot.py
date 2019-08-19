@@ -31,7 +31,6 @@ def GenMandlebrot_parallel_helper(arr: np.ndarray, rowStart:int, rowEnd:int, row
 		for c in range(cols):
 			arr[r][c] =  ColorConverge(complex(stepSize*(c-cols/2),stepSize*(r-rows/2)))
 
-	arr
 
 #@jit
 def GenMandlebrot_parallel(rows: int, cols: int, stepSize: float, numcores: int = 4) -> np.ndarray:
@@ -45,14 +44,11 @@ def GenMandlebrot_parallel(rows: int, cols: int, stepSize: float, numcores: int 
 		threads[i].join()
 	return arr
 
-	
-'''
 
 start = time.time()
 x=GenMandlebrot(10000,10000,.0003)
 end = time.time()
 print("non-parallel: "+str(end-start))
-'''
 
 '''
 #basically no parallelism acheived
@@ -63,7 +59,5 @@ for i in range(1,256):
 	print("parallel ("+str(i)+" threads): "+str(end-start))
 '''
 
-'''
 plt.imshow(x)
 plt.show()
-'''
